@@ -429,9 +429,9 @@ class ProkaryoticCell:
     def apply_slowdown(self, factor):
         
         if not self.has_slowed_down:                 
-            self.damage_rate = max(self.damage_rate * factor, 1.5)  # Minimum limit
-            self.prolif_rate = max(self.prolif_rate * factor, 1.5)
-            self.energy_req_rate = max(self.energy_req_rate * factor, 1.5)
+            self.damage_rate = max(self.damage_rate * factor, 0.05)  # Minimum limit
+            self.prolif_rate = max(self.prolif_rate * factor, 0.05)
+            self.energy_req_rate = max(self.energy_req_rate * factor, 0.05)
             self.has_slowed_down = True
             #!!! print(f"[DEBUG] Cell id={self.id} slowdown applied with factor {factor}")
  
